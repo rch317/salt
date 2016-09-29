@@ -1,3 +1,3 @@
 install_vim:
-  pkg.install:
-   - vim
+  pkg.installed:
+   - name: vim
