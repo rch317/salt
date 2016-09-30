@@ -35,7 +35,7 @@ mysubnet_route_table:
     - vpc_name: SaltVPCTest
     - routes:
       - destination_cidr_block: 0.0.0.0/0
-        internet_gateway_name: myigw2
+        instance_id: igw-995de9fd
       - subnet_names:
         - mysubnet
         - mysubnet_public
