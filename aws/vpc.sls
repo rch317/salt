@@ -28,7 +28,7 @@ mysubnet_route_table:
     - vpc_name: SaltVPCTest
     - routes:
       - destination_cidr_block: 0.0.0.0/0
-        internet_gateway_name: vpctestigw
+        internet_gateway_name: myigw
       - subnet_names:
         - mysubnet
     - profile: aws_us-west2
