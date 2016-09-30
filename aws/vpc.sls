@@ -14,6 +14,13 @@ mysubnet:
     - cidr_block: 10.0.0.0/28
     - profile: aws_us-west2
 
+public subnet:
+  boto_vpc.subnet_present:
+    - name: mysubnet_public
+    - vpc_name: SaltVPCTest
+    - cidr_block: 10.0.0.16/28
+    - profile: aws_us-west2
+
 ### Create the Internet Gateway
 vpctestigw:
   boto_vpc.internet_gateway_present:
@@ -31,4 +38,5 @@ mysubnet_route_table:
         internet_gateway_name: myigw
       - subnet_names:
         - mysubnet
+        - mysubnet_public
     - profile: aws_us-west2
