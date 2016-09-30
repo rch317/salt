@@ -4,7 +4,6 @@ saltvpctest:
     - name: SaltVPCTest
     - cidr_block: 10.0.0.0/24
     - dns_hostnames: True
-#    - region: us-west-2
     - profile: aws_us-west2
 
 ### Create the Subnet
@@ -13,7 +12,6 @@ mysubnet:
     - name: mysubnet
     - vpc_name: SaltVPCTest
     - cidr_block: 10.0.0.0/28
-#    - region: us-west-2
     - profile: aws_us-west2
 
 ### Create the Internet Gateway
@@ -33,4 +31,4 @@ mysubnet_route_table:
         internet_gateway_name: vpctestigw
       - subnet_names:
         - mysubnet
-      - profile: aws_us-west2
+    - profile: aws_us-west2
